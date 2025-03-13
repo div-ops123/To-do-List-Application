@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 # Initialize the Flask application with instance_relative_config=True
 app = Flask(__name__, instance_relative_config=True)
 
-# Ensure the instance folder exists
+# Ensure the instance folder
 os.makedirs(app.instance_path, exist_ok=True)
 
 # Configure the SQLite database to point to the instance folder
@@ -20,9 +20,8 @@ class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
 
-# Create the database tables within the application context
-with app.app_context():
-    db.create_all()
+# Create the database tables if they don't exist(runs every time the app starts)
+db.create_all()
 
 # Route for the homepage to view and add tasks
 @app.route('/', methods=['GET', 'POST'])
