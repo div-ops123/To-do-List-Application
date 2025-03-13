@@ -1,8 +1,8 @@
 # Start with a base image (Step 1)
-FROM ubuntu:20.4
+FROM ubuntu:20.04
 
 # Install Python and pip (Step 2)
-RUN RUN apt-get update && apt-get install -y python3 python3-pip sqlite3
+RUN apt-get update && apt-get install -y python3 python3-pip sqlite3
 
 # Set the author (optional)
 LABEL author="div-ops123"
