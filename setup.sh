@@ -4,7 +4,7 @@
 mkdir -p templates static instance
 
 # Create required files
-touch app.py tasks.db requirements.txt templates/index.html static/styles.css .gitignore
+touch app.py instance/tasks.db requirements.txt templates/index.html static/styles.css .gitignore
 
 # Add common Python ignores to .gitignore
 echo -e "__pycache__/\n*.pyc\ninstance/\ntasks.db" > .gitignore
