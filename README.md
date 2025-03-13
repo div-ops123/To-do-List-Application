@@ -1,2 +1,3 @@
-# To-do-List-Application
-complete Python Flask web application project for a simple to-do list application, with basic CRUD functionality
+# Flask To-Do List App.
+
+A simple Flask web application for managing a to-do list.
