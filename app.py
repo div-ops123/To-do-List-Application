@@ -50,6 +50,6 @@ def delete(task_id):
     db.session.commit()
     return redirect(url_for('index'))
 
-# Run the application on port 5000
+# Flask App to listen on all network interfaces, making it accessible externally on port 5000
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
